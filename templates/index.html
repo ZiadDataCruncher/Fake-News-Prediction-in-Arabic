@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SahihNews - Fake News Detection</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="SahihNews Logo" width="70" height="70" class="d-inline-block align-text-top me-2">
+    
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/predict">Prediction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-white d-flex align-items-center" style="background: url('{{ url_for('static', filename='images/hero_bg.png') }}') no-repeat center center/cover; height: 100vh;">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Bienvenue sur SahihNews</h1>
+            <p class="lead">Votre plateforme de confiance pour détecter les fausses nouvelles en arabe grâce à l'IA.</p>
+            <a href="/predict" class="btn btn-success btn-lg mt-3">Détection</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Pourquoi choisir SahihNews ?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/icon-accuracy.png') }}" alt="Accuracy" class="mb-3" width="80">
+                    <h4>Une grande précision</h4>
+                    <p>Propulsé par des modèles d'IA avancés garantissant des prédictions précises.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/icon-language.png') }}" alt="Language Support" class="mb-3" width="80">
+                    <h4>Langue arabe</h4>
+                    <p>Conçu spécialement pour détecter les fausses nouvelles en arabe.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/icon-truth.png') }}" alt="Truth" class="mb-3" width="80">
+                    <h4>Découvrez la vérité</h4>
+                    <p>Aide à combattre la désinformation et à promouvoir des informations fiables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 SahihNews. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="#"><img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook" width="24"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}" alt="Twitter" width="24"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/linkedin-icon.png') }}" alt="LinkedIn" width="24"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
